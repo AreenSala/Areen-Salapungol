@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Ibiza Amadeo</title>
+    <link rel="stylesheet" href="stylesheet.css.new.css">
+    <link rel="javasheet" href="jvscript.new2023.js">
+</head>
+<body> <br>
+ <center> <img src="C:\Users\salap\Downloads\nn.png" style="width: 30%"></center>
+
+<div class="container">
+  <div class="centered" style="position: absolute;
+  top: 30%;
+  left: 50%;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color:rgba(26, 76, 141, 0.8);
+  color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+
+"><h1><italic>Villa Ibiza</italic></h1>
+<p>Welcome to the Hidden Villa of Amadeo.
+  Your absolute Leisure in the province of Cavite. Nestled with plants and trees that lets you enjoy the nature  away from city noise and husstle.
+  The Villa lets you enjoy the perfect blend of recreation and relaxation that
+   perfect for Family, Friends and loved ones. At this beautiful newly built villa in Amadeo, 
+   you are wrapped with stress free environment.</p></div>
+  <button class="btn" href="reservation.2024.html">Make a Reservation</button>
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="C:\Users\salap\Downloads\339911231_1871705169860100_3172254680437921028_n.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="C:\Users\salap\Downloads\339595666_956476335791063_8194685602634662962_n.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="C:\Users\salap\Downloads\339449134_1346759309502074_338349684663836542_n.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="C:\Users\salap\Downloads\339617245_713902770471614_8304053271893045961_n.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="C:\Users\salap\Downloads\339987797_247458894392447_1715529839154567762_n.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="C:\Users\salap\Downloads\339913757_180015371108908_3740897728357236137_n.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\salap\Downloads\339911231_1871705169860100_3172254680437921028_n.jpg" style="width:100%" onclick="currentSlide(1)" alt="Villa Ibiza
+      Relax and unwind with your Family and Friends here at Villa Ibiza Amadeo.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\salap\Downloads\339595666_956476335791063_8194685602634662962_n.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\salap\Downloads\339449134_1346759309502074_338349684663836542_n.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\salap\Downloads\339617245_713902770471614_8304053271893045961_n.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\salap\Downloads\339987797_247458894392447_1715529839154567762_n.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\salap\Downloads\339913757_180015371108908_3740897728357236137_n.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
+</div>
+<script>
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+    </body>
+
+    </html>
